@@ -355,6 +355,8 @@ main {
   font-weight: var(--fw-300);
   width: max-content;
   max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
   text-align: center;
   padding: 3px 12px;
   border-radius: 8px;
