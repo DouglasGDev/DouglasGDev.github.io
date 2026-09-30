@@ -344,12 +344,18 @@ main {
   margin-bottom: 10px;
 }
 
+.info-content {
+  min-width: 0;
+}
+
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
+  max-width: 100%;
+  text-align: center;
   padding: 3px 12px;
   border-radius: 8px;
 }
