@@ -1346,6 +1346,50 @@ textarea.form-input::-webkit-resizer { display: none; }
 .contact-loc ion-icon { font-size: 16px; }
 
 
+/**
+ * sidebar mini contact buttons (ação, sem texto copiável)
+ */
+
+.contact-mini-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--jet);
+  color: var(--white-2);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  text-decoration: none;
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: var(--transition-1);
+}
+
+.contact-mini-btn ion-icon {
+  font-size: 18px;
+  color: var(--channel-color, var(--orange-yellow-crayola));
+}
+
+.contact-mini-btn:hover {
+  color: var(--white-1);
+  border-color: var(--channel-color, var(--orange-yellow-crayola));
+  transform: translateX(2px);
+}
+
+.contact-mini-btn--email { --channel-color: #ea4335; }
+.contact-mini-btn--github { --channel-color: #e6edf3; }
+.contact-mini-btn--linkedin { --channel-color: #0a66c2; }
+
+/* nenhum canal/link é selecionável para cópia */
+.contact-btn,
+.contact-mini-btn,
+.language-pill,
+.social-link { user-select: none; -webkit-user-select: none; }
+
+
 
 
 
