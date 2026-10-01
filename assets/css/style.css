@@ -1249,15 +1249,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--white-2);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  padding: 7px 14px;
+  padding: 8px 15px;
   border-radius: 30px;
-  border: 1px solid var(--border-gradient-onyx);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  box-shadow: var(--shadow-1);
+  cursor: default;
   transition: var(--transition-1);
 }
 
 .language-pill:hover {
-  color: var(--orange-yellow-crayola);
-  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+  border-color: var(--lang-color, var(--orange-yellow-crayola));
+  color: var(--white-1);
 }
 
 .lang-dot {
@@ -1265,7 +1268,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 10px;
   border-radius: 50%;
   background: var(--lang-color, var(--light-gray));
-  box-shadow: 0 0 6px var(--lang-color, transparent);
+  box-shadow: 0 0 7px var(--lang-color, transparent);
 }
 
 
@@ -1290,12 +1293,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 18px 10px;
   border-radius: 14px;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--white-2);
   font-size: var(--fs-7);
+  font-weight: var(--fw-500);
   text-transform: capitalize;
   text-decoration: none;
   box-shadow: var(--shadow-3);
   z-index: 1;
+  overflow: hidden;
   transition: var(--transition-1);
 }
 
@@ -1306,14 +1311,27 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  transition: var(--transition-2);
+}
+
+.contact-btn ion-icon {
+  font-size: 26px;
+  color: var(--channel-color, var(--orange-yellow-crayola));
   transition: var(--transition-1);
 }
 
-.contact-btn ion-icon { font-size: 24px; }
+.contact-btn:hover {
+  color: var(--white-1);
+  transform: translateY(-2px);
+}
 
-.contact-btn:hover { background: var(--bg-gradient-yellow-1); }
+.contact-btn:hover::before {
+  background: color-mix(in srgb, var(--channel-color, var(--onyx)) 22%, var(--onyx));
+}
 
-.contact-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+.contact-btn--email { --channel-color: #ea4335; }
+.contact-btn--github { --channel-color: #e6edf3; }
+.contact-btn--linkedin { --channel-color: #0a66c2; }
 
 .contact-loc {
   display: flex;
