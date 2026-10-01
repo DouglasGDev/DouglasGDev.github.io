@@ -1230,6 +1230,104 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
+/**
+ * languages pills
+ */
+
+.language-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.language-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--jet);
+  color: var(--white-2);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  padding: 7px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--border-gradient-onyx);
+  transition: var(--transition-1);
+}
+
+.language-pill:hover {
+  color: var(--orange-yellow-crayola);
+  border-color: var(--orange-yellow-crayola);
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lang-color, var(--light-gray));
+  box-shadow: 0 0 6px var(--lang-color, transparent);
+}
+
+
+/**
+ * contact channel buttons
+ */
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.contact-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 10px;
+  border-radius: 14px;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  text-decoration: none;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.contact-btn ion-icon { font-size: 24px; }
+
+.contact-btn:hover { background: var(--bg-gradient-yellow-1); }
+
+.contact-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+
+.contact-loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-style: normal;
+}
+
+.contact-loc ion-icon { font-size: 16px; }
+
+
 
 
 
