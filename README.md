@@ -10,7 +10,7 @@ Baseado no template [vCard](https://github.com/codewithsadee/vcard-personal-port
 - **Bancos de dados:** MySQL, PostgreSQL, Oracle, MariaDB, Redis
 - **Web & mobile:** React, Next.js, React Native, JavaScript/TypeScript
 - **IA aplicada:** LLM, MCP, RAG, n8n
-- **Infra & DevOps:** Docker, CI/CD, noções de Kubernetes
+- **Infra & DevOps:** Docker, AWS, CI/CD, noções de Kubernetes
 
 ## Rodando localmente
 
