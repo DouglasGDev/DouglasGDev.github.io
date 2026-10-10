@@ -1,0 +1,44 @@
+name: Atualiza cache de imagens do GitHub
+
+# O site serve cópias locais dos previews do GitHub (assets/images/github/) para
+# nenhum visitante depender da API — ver tools/atualizar-imagens.js.
+# Este workflow renova essas cópias sozinho.
+
+on:
+  schedule:
+    - cron: '0 4 1 * *' # dia 1 de cada mês, 04:00 UTC
+  workflow_dispatch: {} # permite rodar manualmente quando quiser
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-imagens
+  cancel-in-progress: true
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Baixar previews e foto de perfil
+        run: node tools/atualizar-imagens.js
+        # Se alguma imagem falhar, mantém a versão anterior em vez de quebrar o site.
+        continue-on-error: true
+
+      - name: Commit das mudanças
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/github
+          if git diff --cached --quiet; then
+            echo "Nenhuma imagem mudou."
+          else
+            git commit -m "Cache: renova imagens do GitHub ($(date -u +%Y-%m-%d))"
+            git push
+          fi
