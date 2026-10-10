@@ -6,7 +6,8 @@ Baseado no template [vCard](https://github.com/codewithsadee/vcard-personal-port
 
 ## Stack em destaque
 
-- **Backend & integrações:** Rust, Go, Java, PHP/Laravel, Node/Express, Delphi — REST com Swagger/OpenAPI, Webhooks, WebSocket e arquitetura BFF
+- **Backend & integrações:** Rust, Java, PHP/Laravel, Node/Express, Delphi — REST com Swagger/OpenAPI, Webhooks, WebSocket e arquitetura BFF
+- **Em estudo:** Go (goroutines, canais, `context`, tratamento explícito de erro)
 - **Bancos de dados:** MySQL, PostgreSQL, Oracle, MariaDB, Redis
 - **Web & mobile:** React, Next.js, React Native, JavaScript/TypeScript
 - **IA aplicada:** LLM, MCP, RAG, n8n
